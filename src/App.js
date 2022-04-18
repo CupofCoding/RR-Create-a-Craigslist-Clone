@@ -1,11 +1,14 @@
+import React from 'react'
+
 // Import data
-import Directory from './directory';
-import Gallery from './gallery';
-import Searchbar from './searchbar';
-import Sidebar from './sidebar';
+import {postings} from "./postings.js"
 
 // Import components
 import './App.css';
+import Directory from "./directory"
+import Gallery from './gallery';
+import Searchbar from './searchbar';
+import Sidebar from './sidebar';
 
 function App(){
   return (
@@ -14,8 +17,8 @@ function App(){
       <div className="App">
         <Sidebar></Sidebar>
         <Searchbar></Searchbar>
-        {/* <Directory></Directory> */}
-        <Gallery></Gallery>
+        <Directory></Directory>
+        <Gallery posting={postings}></Gallery>
       </div>
     </div>
   );

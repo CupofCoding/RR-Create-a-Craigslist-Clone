@@ -1,27 +1,19 @@
 import React from "react"
-import { postings } from "./postings"
+// import { postings } from "./postings"
 
-function Posting(){
-    let postingsFormatted = postings.map((posting)=>{
-        return(
-            <div>
-                <div>
-                    <h3>{posting.price}</h3>
-                    <img src={posting.imageURL} alt={posting.title}/>
-                </div>
-                <div>
-                    <h2>
-                        <a href="*">{posting.title}</a>
-                    </h2>
-                    <h4>{posting.description}</h4>
-                </div>
-            </div>
-        )
-    })
-    return(
-        <div>
-            {postingsFormatted}
-        </div>
+// const craigPost = require('./postings')
+
+// let postList = craigPost.postings.map((data, i) => {
+//     return <Posting data={data} key={i} />
+// })
+
+function Posting(props){
+    return (
+       <div className="posting">
+       <h1>{props.posting.title}</h1>
+       <img src={props.posting.imageURL} alt={props.posting.title} />
+       <p>{props.posting.description}</p>
+   </div>
     )
 }
 

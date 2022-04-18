@@ -2,8 +2,8 @@ import React from "react";
 
 function Directory(){
     return(
-        <div>
-            
+        <div className="directory">
+            <h1>Directory</h1>
         </div>
     )
 }
